@@ -1,28 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour {
 
     float fillAmount = 0;
 
-    GameObject score = GameObject.Find("GameOver");
+   
 
     int pOneWaves;
     int pTwoWaves;
 
     float width;
 
-
-
 	// Use this for initialization
 	void Start () {
+
+        GameObject score = GameObject.Find("GameOver");
 
         pOneWaves = score.GetComponent<Score>().PlayerOneWaves;
 
         pTwoWaves = score.GetComponent<Score>().PlayerTwoWaves;
 
-        width = GetComponent<RectTransform>().rect.width;
+        width = GetComponent<RectTransform>().rect.size.x;
+
+        width = 0;
+
+
+
+
 		
 	}
 	
@@ -37,6 +44,8 @@ public class ProgressBar : MonoBehaviour {
         {
             fillAmount = width / pTwoWaves;
         }
+
+        width = fillAmount;
 		
 	}
 }
