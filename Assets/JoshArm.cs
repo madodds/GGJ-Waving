@@ -6,7 +6,7 @@ public class JoshArm : MonoBehaviour {
     Rigidbody2D rigidBody;
     bool leftDown = false;
     bool rightDown = false;
-    float torqueSpeed = .5f;
+    float torqueSpeed = 5f;
 	// Use this for initialization
 	void Start () {
         
@@ -16,7 +16,7 @@ public class JoshArm : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown(KeyCode.A) && !leftDown)
         {
-            GetComponent<Rigidbody2D>().AddTorque(-torqueSpeed, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddTorque(torqueSpeed, ForceMode2D.Impulse);
             leftDown = true;
         }
         else if(Input.GetKeyUp(KeyCode.A) && leftDown)
@@ -26,7 +26,7 @@ public class JoshArm : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.D) && !rightDown)
         {
-            GetComponent<Rigidbody2D>().AddTorque(torqueSpeed, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddTorque(-torqueSpeed, ForceMode2D.Impulse);
             rightDown = true;
         }
         else if (Input.GetKeyUp(KeyCode.D) && rightDown)
