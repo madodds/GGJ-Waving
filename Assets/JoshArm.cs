@@ -35,7 +35,7 @@ public class JoshArm : MonoBehaviour {
         }
     }
 
-    OnCollisionEnter2D(Collider2D col)
+   private void OnCollisionEnter2D(Collision2D col)
     {
 
     }
