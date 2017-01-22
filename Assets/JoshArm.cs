@@ -43,11 +43,8 @@ public class JoshArm : MonoBehaviour {
         }
     }
 
-<<<<<<< HEAD
-   private void OnCollisionEnter2D(Collision2D col)
-=======
-    void OnTriggerEnter2D(Collider2D col)
->>>>>>> 278ad245e53ca4109c7ee208f85f875f0d220c0f
+  
+   void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject == left.gameObject)
         {
