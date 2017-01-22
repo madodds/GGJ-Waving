@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveIndicator : MonoBehaviour {
-    bool highlighted;
+    bool highlighted = false;
+
+    public bool Highlighted
+    {
+        get { return highlighted; }
+        set { highlighted = value; }
+    }
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +20,10 @@ public class WaveIndicator : MonoBehaviour {
 		if(highlighted)
         {
             GetComponent<SpriteRenderer>().color = new Color(0, 1, 0);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
         }
 	}
 }

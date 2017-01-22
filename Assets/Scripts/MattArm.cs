@@ -8,6 +8,11 @@ public class MattArm : MonoBehaviour
     bool leftDown = false;
     bool rightDown = false;
     float torqueSpeed = 5f;
+    float prevTorque;
+
+    public WaveIndicator left;
+    public WaveIndicator middle;
+    public WaveIndicator right;
     // Use this for initialization
     void Start () {
 		
@@ -34,6 +39,57 @@ public class MattArm : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.RightArrow) && rightDown)
         {
             rightDown = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject == left.gameObject)
+        {
+            Debug.Log("Left");
+            if (!right.Highlighted && !middle.Highlighted)
+            {
+                left.Highlighted = true;
+            }
+            else if (right.Highlighted && !middle.Highlighted)
+            {
+                right.Highlighted = false;
+            }
+            else if (left.Highlighted && middle.Highlighted)
+            {
+                left.Highlighted = false;
+                middle.Highlighted = false;
+            }
+            else if (right.Highlighted && middle.Highlighted)
+            {
+                left.Highlighted = true;
+                
+            }
+        }
+        else if (col.gameObject == right.gameObject)
+        {
+            if (!left.Highlighted && !middle.Highlighted)
+            {
+                right.Highlighted = true;
+            }
+            else if (left.Highlighted && !middle.Highlighted)
+            {
+                left.Highlighted = false;
+            }
+            else if (right.Highlighted && middle.Highlighted)
+            {
+                right.Highlighted = false;
+                middle.Highlighted = false;
+            }
+            else if (left.Highlighted && middle.Highlighted)
+            {
+                right.Highlighted = true;
+            }
+        }
+
+        if (col.gameObject == middle.gameObject && (left.Highlighted || right.Highlighted))
+        {
+            middle.Highlighted = true;
         }
     }
 }
