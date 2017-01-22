@@ -83,7 +83,9 @@
   <ItemGroup>
     <Compile Include="Assets\JoshArm.cs" />
     <Compile Include="Assets\MattArm.cs" />
+    <Compile Include="Assets\Scripts\BloodLogic.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\WaveIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\Blood\README.txt" />
