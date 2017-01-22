@@ -673,8 +673,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!95 &1200290259
 Animator:
   serializedVersion: 3
@@ -982,7 +980,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> origin/master
 --- !u!1 &1498470624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,11 +1030,9 @@ MonoBehaviour:
   PlayerOneScoreLabel: {fileID: 545028181}
   PlayerTwoScoreLabel: {fileID: 100528461}
   GameOverLabel: {fileID: 277108764}
-<<<<<<< HEAD
   explosionAnimator: {fileID: 1706873665}
 --- !u!1001 &1667033666
 Prefab:
-=======
   explosionAnimator: {fileID: 0}
 --- !u!1 &1641506128
 GameObject:
@@ -1104,7 +1099,6 @@ Rigidbody2D:
   m_Constraints: 3
 --- !u!212 &1641506132
 SpriteRenderer:
->>>>>>> origin/master
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -1318,8 +1312,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &1708923517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,4 +1535,3 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
->>>>>>> origin/master
