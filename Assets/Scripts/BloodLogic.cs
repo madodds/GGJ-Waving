@@ -20,7 +20,6 @@ public class BloodLogic : MonoBehaviour {
 			if (ArmJoint.eulerAngles.z > 150 && ArmJoint.eulerAngles.z < 210)
 			{
 				int animChoice = Random.Range(0, 4);
-				Debug.Log(animChoice);
 				animator.SetTrigger(string.Format("blood_{0}", animChoice));
 			}
 		}
