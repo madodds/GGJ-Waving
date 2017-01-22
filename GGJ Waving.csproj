@@ -85,6 +85,7 @@
     <Compile Include="Assets\MattArm.cs" />
     <Compile Include="Assets\Scripts\BloodLogic.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Timer.cs" />
     <Compile Include="Assets\WaveIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
