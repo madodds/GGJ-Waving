@@ -12,19 +12,18 @@ public class Score : MonoBehaviour
 	public int PlayerTwoWaves;
 
 	public int MaxScore = 10;
-	public int MaxFontSize = 80;
+	public int MaxFontSize = 60;
 	public float FontSizeGrowthMod = 1.2f;
 	public GUIText PlayerOneScoreLabel;
 	public GUIText PlayerTwoScoreLabel;
 	public GUIText GameOverLabel;
+	public Animator explosionAnimator;
 
 	private bool _gameEnded;
-	private Animator animator;
 
 	// Use this for initialization
 	void Start()
 	{
-		animator = GetComponent<Animator>();
 		PlayerOneWaves = 0;
 		PlayerTwoWaves = 0;
 		_gameEnded = false;
@@ -68,8 +67,9 @@ public class Score : MonoBehaviour
 
 	private void GameOver(char player)
 	{
-		animator.SetTrigger("explosion");
+		explosionAnimator.SetTrigger("explosion");
 		_gameEnded = true;
+		GameOverLabel.enabled = true;
 		GameOverLabel.text = GameOverLabel.text.Replace('~', player);
 	}
 }
