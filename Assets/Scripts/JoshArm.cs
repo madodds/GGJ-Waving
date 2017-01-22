@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JoshArm : MonoBehaviour {
     Rigidbody2D rigidBody;
+    Score gameOver;
     bool leftDown = false;
     bool rightDown = false;
     float torqueSpeed = 5f;
@@ -14,8 +15,17 @@ public class JoshArm : MonoBehaviour {
     public WaveIndicator right;
 	// Use this for initialization
 	void Start () {
-        
+        gameOver = FindObjectOfType<Score>();
 	}
+
+    public void Restart()
+    {
+        GetComponent<Rigidbody2D>().angularVelocity = 0;
+        transform.localRotation = Quaternion.Euler(Vector3.zero);
+        right.Highlighted = false;
+        middle.Highlighted = false;
+        left.Highlighted = false;
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -64,7 +74,10 @@ public class JoshArm : MonoBehaviour {
             }
             else if(right.Highlighted && middle.Highlighted)
             {
-                left.Highlighted = true;
+                right.Highlighted = false;
+                middle.Highlighted = false;
+                left.Highlighted = false;
+                gameOver.PlayerOneWaves++;
             }
         }
         else if (col.gameObject == right.gameObject)
@@ -84,7 +97,10 @@ public class JoshArm : MonoBehaviour {
             }
             else if (left.Highlighted && middle.Highlighted)
             {
-                right.Highlighted = true;
+                right.Highlighted = false;
+                middle.Highlighted = false;
+                left.Highlighted = false;
+                gameOver.PlayerOneWaves++;
             }
         }
 
