@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/HellBattlefield.unity
+  isLoaded: 1
+  isActive: 1
