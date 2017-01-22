@@ -75,9 +75,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\JoshArm.cs" />
-    <Compile Include="Assets\MattArm.cs" />
+    <Compile Include="Assets\Scripts\BloodLogic.cs" />
+    <Compile Include="Assets\Scripts\JoshArm.cs" />
+    <Compile Include="Assets\Scripts\MattArm.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\WaveIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\Blood\README.txt" />
